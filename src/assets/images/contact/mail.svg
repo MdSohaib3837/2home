@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/mail</title>
+    <g id="icon/mail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sms">
+            <path d="M18.6666667,54.6666667 C10.6666667,54.6666667 5.33333333,50.6666667 5.33333333,41.3333333 L5.33333333,22.6666667 C5.33333333,13.3333333 10.6666667,9.33333333 18.6666667,9.33333333 L45.3333333,9.33333333 C53.3333333,9.33333333 58.6666667,13.3333333 58.6666667,22.6666667 L58.6666667,41.3333333 C58.6666667,50.6666667 53.3333333,54.6666667 45.3333333,54.6666667 L18.6666667,54.6666667 Z" id="Vector" stroke="#949AA4" stroke-width="4"></path>
+            <path d="M45.3333333,24 L36.9866536,30.6666667 C34.2399871,32.8533333 29.7333202,32.8533333 26.9866536,30.6666667 L18.6666667,24" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0"></path>
+        </g>
+    </g>
+</svg>

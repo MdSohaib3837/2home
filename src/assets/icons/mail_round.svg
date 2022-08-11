@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/round/phone copy</title>
+    <g id="icon/round/phone-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sms" transform="translate(13.283019, 13.283019)">
+            <path d="M11.0833333,32.4583333 C6.33333333,32.4583333 3.16666667,30.0833333 3.16666667,24.5416667 L3.16666667,13.4583333 C3.16666667,7.91666667 6.33333333,5.54166667 11.0833333,5.54166667 L26.9166667,5.54166667 C31.6666667,5.54166667 34.8333333,7.91666667 34.8333333,13.4583333 L34.8333333,24.5416667 C34.8333333,30.0833333 31.6666667,32.4583333 26.9166667,32.4583333 L11.0833333,32.4583333 Z" id="Vector" stroke="#FFFFFF" stroke-width="1.28301887"></path>
+            <path d="M26.9166667,14.25 L21.9608256,18.2083333 C20.3299923,19.5066667 17.6541589,19.5066667 16.0233256,18.2083333 L11.0833333,14.25" id="Vector" stroke="#FFFFFF" stroke-width="1.28301887" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M38,0 L38,38 L0,38 L0,0 L38,0 Z" id="Vector" opacity="0"></path>
+        </g>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="1.28301887" cx="32" cy="32" r="31.3584906"></circle>
+    </g>
+</svg>

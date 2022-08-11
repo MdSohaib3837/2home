@@ -1,0 +1,15 @@
+.cookie-selection-main {
+  .checkbox-cookies {
+    .MuiFormControlLabel-label {
+      font-weight: 700;
+      font-family: "OpenSans";
+      font-size: 14px;
+      letter-spacing: unset;
+    }
+  }
+  .modal-content{
+    max-height: calc(100vh);
+    overflow: auto;
+
+  }
+}

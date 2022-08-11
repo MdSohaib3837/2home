@@ -1,0 +1,31 @@
+.service{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  margin-bottom: 2px;
+}
+
+.P-Service {
+  padding-left: 109px;
+}
+
+.S-Service{
+  padding-left: 45px;
+}
+
+.C-Service{
+  margin-left: -146px;
+}
+
+.D-Service , .L-Service{
+  padding-left: 60px;
+}
+.Icon {
+  padding-right: 10px;
+}
+
+.P1-para{
+  margin-bottom: 10px !important;
+}

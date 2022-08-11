@@ -1,0 +1,85 @@
+.Container{
+  height: 70px;
+  background-color: white;
+  border: 3px solid #003030;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 100px;
+  position: relative;
+  margin-right: 50px;
+  bottom: -25px;
+  width: 900px;
+  max-width: 1024px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  margin-top: 40px;
+}
+
+.Form{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+ 
+}
+
+.formSearchInput{
+  border: none;
+  outline: none;
+}
+
+.formSearchText{
+  color:#003030;
+  cursor: pointer;
+}
+
+.date{
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+.FormButton{
+  color: white !important;
+  background-color: #003030 !important;
+  margin-bottom: 25px !important;
+}

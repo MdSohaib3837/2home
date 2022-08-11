@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/location</title>
+    <g id="icon/location" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Vector" transform="translate(-0.000000, 0.000000)">
+            <path d="M32.0022914,35.8131777 C27.4072822,35.8131777 23.6822917,32.0881872 23.6822917,27.493178 C23.6822917,22.8981689 27.4072822,19.1731771 32.0022914,19.1731771 C36.5973005,19.1731771 40.3222911,22.8981689 40.3222911,27.493178 C40.3222911,32.0881872 36.5973005,35.8131777 32.0022914,35.8131777 Z" stroke="#949AA4" stroke-width="4" stroke-dasharray="0,0"></path>
+            <path d="M54.3458913,22.666673 C57.4125579,36.2133395 48.985892,47.6800073 41.5992254,54.7733409 C36.2392254,59.9466743 27.7592252,59.9466743 22.3725586,54.7733409 C15.0125586,47.6800073 6.58589077,36.1866722 9.65255737,22.6400057 C14.9058908,-0.453327179 49.1192245,-0.426659902 54.3458913,22.666673 Z" stroke="#949AA4" stroke-width="4" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" opacity="0" transform="translate(32.000000, 32.000000) rotate(-180.000000) translate(-32.000000, -32.000000) "></path>
+        </g>
+    </g>
+</svg>

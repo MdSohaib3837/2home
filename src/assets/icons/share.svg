@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/share</title>
+    <g id="icon/share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="export">
+            <path d="M24.8541667,17.334479 L31.6808345,10.5078125 L38.5074997,17.334479" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <line x1="31.6822917" y1="37.8127085" x2="31.6822917" y2="10.6927083" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <path d="M10.6666667,32 C10.6666667,43.7866669 18.6666667,53.3333333 32,53.3333333 C45.3333333,53.3333333 53.3333333,43.7866669 53.3333333,32" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0" transform="translate(32.000000, 32.000000) rotate(-180.000000) translate(-32.000000, -32.000000) "></path>
+        </g>
+    </g>
+</svg>

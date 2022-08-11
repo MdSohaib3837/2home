@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/commerce</title>
+    <g id="icon/commerce" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buliding" transform="translate(3.560984, 14.666667)">
+            <line x1="1.77234893" y1="44" x2="55.1056823" y2="44" id="Vector" stroke="#949AA4" stroke-width="4" fill="#292D32" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <path d="M16.7723489,2 C9.77234893,2 7.4390156,5.75899992 7.4390156,10.4 L7.4390156,44 L49.4390156,44 L49.4390156,10.4 C49.4390156,5.75899992 47.1056823,2 40.1056823,2 L16.7723489,2 Z" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M46.7586693,2 C47.1640912,2 47.5494534,2.12239221 47.8720004,2.33852656 C48.1945473,2.55466091 48.4542788,2.86453742 48.6084393,3.23950601 L48.6084393,3.23950601 L52.7538102,13.322403 C52.9638148,13.8332029 52.9468958,14.3807666 52.7497756,14.8531314 C52.5526554,15.3254963 52.1753341,15.7226624 51.6645342,15.932667 C51.4232598,16.0318619 51.1649099,16.082897 50.9040402,16.082897 L50.9040402,16.082897 L5.97078647,16.082897 C5.41850172,16.082897 4.91850172,15.8590394 4.55657291,15.4971106 C4.19464409,15.1351818 3.97078647,14.6351818 3.97078647,14.082897 C3.97078647,13.8218805 4.02187908,13.563388 4.1211825,13.3219994 L4.1211825,13.3219994 L8.26912561,3.23910241 C8.42333764,2.86424094 8.68306743,2.55446534 9.00557981,2.33840511 C9.3280922,2.12234487 9.71338717,2 10.1187296,2 L10.1187296,2 Z" id="Rectangle" stroke="#949AA4" stroke-width="4" fill="#F1F4F6"></path>
+            <line x1="28.4390156" y1="28.6666667" x2="28.4390156" y2="36.6666667" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <g id="Group" transform="translate(4.439016, 14.333333)" fill="#949AA4">
+                <circle id="Oval-Copy" cx="3.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-2" cx="9.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-3" cx="15.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-4" cx="20.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-5" cx="26.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-6" cx="32.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-7" cx="38.5" cy="3.5" r="3.5"></circle>
+                <circle id="Oval-Copy-8" cx="44.5" cy="3.5" r="3.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

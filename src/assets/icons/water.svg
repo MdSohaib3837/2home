@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/water</title>
+    <g id="icon/water" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="drop">
+            <path d="M30.3740985,5.89333336 C25.3074319,9.76000015 10.347403,22.3733317 10.4270833,37.0666656 C10.4270833,48.9599991 20.1074206,58.6666667 32.02742,58.6666667 C43.9474195,58.6666667 53.6273905,48.9866664 53.6273905,37.0933329 C53.6540216,22.6133334 38.6673549,9.78666679 33.6273549,5.89333336 C32.6673549,5.14666669 31.3340985,5.14666669 30.3740985,5.89333336 Z" id="Vector" stroke="#949AA4" stroke-width="4" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0"></path>
+        </g>
+    </g>
+</svg>

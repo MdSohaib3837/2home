@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/appartement</title>
+    <g id="icon/appartement" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="buliding">
+            <line x1="5.33333333" y1="58.6666667" x2="58.6666667" y2="58.6666667" id="Vector" stroke="#949AA4" stroke-width="4" fill="#292D32" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <path d="M18.6666667,5.33333333 C10.6666667,5.33333333 8,10.1066666 8,16 L8,58.6666667 L56,58.6666667 L56,16 C56,10.1066666 53.3333333,5.33333333 45.3333333,5.33333333 L18.6666667,5.33333333 Z" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <line x1="18.6666667" y1="44" x2="26.6666667" y2="44" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <line x1="37.3333333" y1="44" x2="45.3333333" y2="44" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <line x1="18.6666667" y1="32" x2="26.6666667" y2="32" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <line x1="37.3333333" y1="32" x2="45.3333333" y2="32" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <line x1="18.6666667" y1="20" x2="26.6666667" y2="20" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <line x1="37.3333333" y1="20" x2="45.3333333" y2="20" id="Vector" stroke="#949AA4" stroke-width="4" opacity="0.400000006" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0"></line>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0"></path>
+        </g>
+    </g>
+</svg>

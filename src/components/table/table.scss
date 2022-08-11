@@ -1,0 +1,23 @@
+.table-main {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    background-color: #003030;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #dddddd !important;
+    padding: 14px;
+    font-weight: 700;
+    font-family: 'OpenSans';
+
+  }
+  td {
+    font-family: "OpenSans" !important;
+    border: 1px solid #dddddd !important;
+    padding: 14px;
+    vertical-align: baseline;
+  }
+}

@@ -1,0 +1,20 @@
+.image-div {
+  // background-image: url("../../assets//images/homepage/banner2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 9px 9px 0px 0px;
+  .image-content-main {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+  .top-badge {
+    background: -webkit-linear-gradient(64deg, #005e5e, #003030);
+  }
+}
+.card-shadow {
+  box-shadow: 0 0 14px rgb(0 48 48 / 20%);
+  background-color: #ffffff;
+}

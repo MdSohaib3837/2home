@@ -1,0 +1,14 @@
+.image-wrapper {
+  .img-top {
+    display: none;
+  }
+  .card:hover {
+    .img-top {
+      display: block;
+      transform: scale(1.06)
+    }
+    .image {
+      display: none;
+    }
+  }
+}

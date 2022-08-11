@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/mail copy 2</title>
+    <g id="icon/mail-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sms">
+            <path d="M18.6666667,54.6666667 C10.6666667,54.6666667 5.33333333,50.6666667 5.33333333,41.3333333 L5.33333333,22.6666667 C5.33333333,13.3333333 10.6666667,9.33333333 18.6666667,9.33333333 L45.3333333,9.33333333 C53.3333333,9.33333333 58.6666667,13.3333333 58.6666667,22.6666667 L58.6666667,41.3333333 C58.6666667,50.6666667 53.3333333,54.6666667 45.3333333,54.6666667 L18.6666667,54.6666667 Z" id="Vector" stroke="#949AA4" stroke-width="4"></path>
+            <line x1="5.5" y1="25.5" x2="58.5" y2="25.5" id="Line" stroke="#949AA4" stroke-width="3" stroke-linecap="square"></line>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0"></path>
+        </g>
+        <circle id="Oval" fill="#D4D7DB" cx="15.5" cy="18.5" r="2.5"></circle>
+        <circle id="Oval-Copy" fill="#D4D7DB" cx="23.5" cy="18.5" r="2.5"></circle>
+    </g>
+</svg>

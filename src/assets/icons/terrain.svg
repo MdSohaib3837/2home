@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/terrain</title>
+    <g id="icon/terrain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="picture-frame">
+            <g id="Group-71" transform="translate(5.333333, 5.333333)" stroke="#949AA4" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <line x1="18.6666667" y1="0" x2="31.8666992" y2="53.3333333" id="Vector"></line>
+                <line x1="25.4134115" y1="27.2539062" x2="0" y2="34.6672363" id="Vector"></line>
+            </g>
+            <path d="M40,58.6666667 C53.3333333,58.6666667 58.6666667,53.3333333 58.6666667,40 L58.6666667,24 C58.6666667,10.6666667 53.3333333,5.33333333 40,5.33333333 L24,5.33333333 C10.6666667,5.33333333 5.33333333,10.6666667 5.33333333,24 L5.33333333,40 C5.33333333,53.3333333 10.6666667,58.6666667 24,58.6666667 L40,58.6666667 Z" id="Vector" stroke="#949AA4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero"></path>
+            <path d="M64,0 L64,64 L0,64 L0,0 L64,0 Z" id="Vector" opacity="0"></path>
+        </g>
+    </g>
+</svg>
