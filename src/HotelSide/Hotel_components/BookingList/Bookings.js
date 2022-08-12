@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../../pages/header/header";
 import Navbar from "../navbar/Navbar";
 
@@ -11,6 +11,8 @@ const Bookings = () => {
   const [cancelled, setCancelled] = React.useState();
   const [checkout, setCheckout] = React.useState();
   const [checkin, setCheckin] = React.useState();
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState();
 
   return (
     <div>
@@ -33,11 +35,15 @@ const Bookings = () => {
             <DatePicker
               placeholderText="Start Date"
               className="bg-white shadow-md rounded !justify-center !mt-4 ml-[50px] !font-[OpenSans] !text-black !py-2"
+              selected={newEvent.start}
+              onChange={(start) => setNewEvent({ ...newEvent, start })}
             />
             <Typography className="items-center !mt-4 !ml-8">To</Typography>
             <DatePicker
               placeholderText="End Date"
               className="bg-white shadow-md rounded !justify-center !mt-4 ml-[50px] !font-[OpenSans] !text-black !py-2"
+              selected={newEvent.end}
+              onChange={(end) => setNewEvent({ ...newEvent, end })}
             />
           </div>
           <div>
