@@ -55,8 +55,8 @@ const Bookings = () => {
                 <div class="flex-row shadow-md rounded px-8 pt-6 pb-8 mb-4">
                   <div class="mb-4 flex-row">
                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                      <div className="Features flex flex-row place-items-center !justify-between !gap-2 !ml-0 !mr-0">
-                        <span className=" service ml-4 ">
+                      <div className="Features flex flex-row place-items-center !justify-between !gap-24 !ml-0 !mr-0">
+                        <span className=" service">
                           <FormControlLabel
                             control={
                               <Checkbox

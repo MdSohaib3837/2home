@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Hotel_DetailForm.scss";
 import Navbar from "../navbar/Navbar";
-import { Checkbox, Divider, FormControlLabel } from "@mui/material";
+import { Checkbox, Divider, FormControlLabel, FormGroup } from "@mui/material";
 import CITIES from "../../../assets/static-data/cities";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

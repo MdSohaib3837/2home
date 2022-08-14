@@ -59,7 +59,10 @@ export default function Footer(props) {
                 >
                   <div className="flex flex-col pt-[20px] ml-[30px] box-border h-full justify-between">
                     <div>
-                      <p className="font-[OpenSans] font-bold text-[16px] text-[#C49676]">
+                      <p
+                        className="font-[OpenSans] font-bold text-[16px] text-[#C49676]"
+                        onClick={"/contact"}
+                      >
                         Contact
                       </p>
                       <p className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px]">
