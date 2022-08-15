@@ -1,14 +1,6 @@
 import React, { useState } from "react";
-import "../Hotel-DetailForm/Hotel_DetailForm.scss";
+import "./Room_details.scss";
 import Navbar from "../navbar/Navbar";
-import {
-  faChild,
-  faMugSaucer,
-  faParking,
-  faSmoking,
-  faUtensils,
-  faWifi,
-} from "@fortawesome/free-solid-svg-icons";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
@@ -33,6 +25,20 @@ const Room_detail = () => {
     bathrobe: false,
     hairDryer: false,
     spaBath: false,
+    airConditioning: false,
+    heating: false,
+    wardrobe: false,
+    towels: false,
+    linen: false,
+    flatScreenTV: false,
+    balcony: false,
+    terrace: false,
+    views: false,
+    coffeeMaker: false,
+    refrigerator: false,
+    electricKettle: false,
+    dinningTable: false,
+    dinningArea: false,
   });
   const handleItemsChange = (event) => {
     setItems({
@@ -50,6 +56,20 @@ const Room_detail = () => {
     bathrobe,
     hairDryer,
     spaBath,
+    airConditioning,
+    heating,
+    wardrobe,
+    towels,
+    linen,
+    flatScreenTV,
+    balcony,
+    terrace,
+    views,
+    coffeeMaker,
+    refrigerator,
+    electricKettle,
+    dinningTable,
+    dinningArea,
   } = items;
   const error =
     [
@@ -71,7 +91,7 @@ const Room_detail = () => {
     guestNumber: 1,
   });
   const [similarRooms, setSimilarRooms] = useState({
-    similarRooms: 0,
+    sameRooms: 0,
   });
   const handleRoomTypeOption = (name, operation) => {
     setBedType((prev) => {
@@ -85,7 +105,7 @@ const Room_detail = () => {
     setGuest((prev) => {
       return {
         ...prev,
-        [name]: operation === "i" ? bedType[name] + 1 : bedType[name] - 1,
+        [name]: operation === "i" ? guest[name] + 1 : guest[name] - 1,
       };
     });
   };
@@ -93,7 +113,8 @@ const Room_detail = () => {
     setSimilarRooms((prev) => {
       return {
         ...prev,
-        [name]: operation === "i" ? bedType[name] + 1 : bedType[name] - 1,
+        [name]:
+          operation === "i" ? similarRooms[name] + 1 : similarRooms[name] - 1,
       };
     });
   };
@@ -103,7 +124,7 @@ const Room_detail = () => {
         <Navbar />
       </div>
       <div class="col-span-10 ml-4 pr-4">
-        <div className="!px-8">
+        <div className="">
           <Header />
         </div>
 
@@ -114,7 +135,7 @@ const Room_detail = () => {
               Add Room
             </div>
             <div class="w-full font-[OpenSans]">
-              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div class="mb-6">
                   <label class="block text-gray-700 text-sm font-bold mb-2">
                     Room Name
@@ -174,9 +195,10 @@ const Room_detail = () => {
                           Single
                           <div className="optionCounter -ml-6">
                             <button
+                              disabled={bedType.singleBed <= 1}
                               className="optionCounterButton"
                               onClick={() =>
-                                handleRoomTypeOption("SingleBed", "d")
+                                handleRoomTypeOption("singleBed", "d")
                               }
                             >
                               -
@@ -187,7 +209,7 @@ const Room_detail = () => {
                             <button
                               className="optionCounterButton"
                               onClick={() =>
-                                handleRoomTypeOption("SingleBed", "i")
+                                handleRoomTypeOption("singleBed", "i")
                               }
                             >
                               +
@@ -201,9 +223,10 @@ const Room_detail = () => {
                         Double
                         <div className="optionCounter -ml-8">
                           <button
+                            disabled={bedType.doubleBed <= 1}
                             className="optionCounterButton"
                             onClick={() =>
-                              handleRoomTypeOption("DoubleBed", "d")
+                              handleRoomTypeOption("doubleBed", "d")
                             }
                           >
                             -
@@ -214,7 +237,7 @@ const Room_detail = () => {
                           <button
                             className="optionCounterButton"
                             onClick={() =>
-                              handleRoomTypeOption("DoubleBed", "i")
+                              handleRoomTypeOption("doubleBed", "i")
                             }
                           >
                             +
@@ -232,8 +255,9 @@ const Room_detail = () => {
                     Guest
                     <div className="optionCounter ml-2">
                       <button
+                        disabled={guest.guestNumber <= 1}
                         className="optionCounterButton"
-                        onClick={() => handleGuestOption("Guest", "d")}
+                        onClick={() => handleGuestOption("guestNumber", "d")}
                       >
                         -
                       </button>
@@ -242,7 +266,7 @@ const Room_detail = () => {
                       </span>
                       <button
                         className="optionCounterButton"
-                        onClick={() => handleGuestOption("Guest", "i")}
+                        onClick={() => handleGuestOption("guestNumber", "i")}
                       >
                         +
                       </button>
@@ -258,20 +282,21 @@ const Room_detail = () => {
                     Rooms
                     <div className="optionCounter">
                       <button
+                        disabled={similarRooms.sameRooms <= 1}
                         className="optionCounterButton"
                         onClick={() =>
-                          handleSimilarRoomOption("SimilarRooms", "d")
+                          handleSimilarRoomOption("sameRooms", "d")
                         }
                       >
                         -
                       </button>
                       <span className="optionCounterNumber">
-                        {similarRooms.similarRooms}
+                        {similarRooms.sameRooms}
                       </span>
                       <button
                         className="optionCounterButton"
                         onClick={() =>
-                          handleSimilarRoomOption("SimilarRooms", "i")
+                          handleSimilarRoomOption("sameRooms", "i")
                         }
                       >
                         +
@@ -279,7 +304,7 @@ const Room_detail = () => {
                     </div>
                   </label>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
 
@@ -323,7 +348,7 @@ const Room_detail = () => {
                     {/* items available in BathRoom */}
                     <div className="Features">
                       <div>
-                        <div className="Features flex flex-col place-items-center items-start !justify-between">
+                        <div className="Features w-full flex flex-col place-items-center items-start !justify-between">
                           <FormControl
                             required
                             error={error}
@@ -338,17 +363,17 @@ const Room_detail = () => {
                               Which items are available in bathroom?
                             </FormLabel>
                             <FormGroup>
-                              <div className="!flex !flex-row gap-24">
+                              <div className="!flex !flex-row w-full gap-8 mb-2">
                                 <FormControlLabel
+                                  className="TP"
                                   control={
                                     <Checkbox
                                       checked={toiletPaper}
                                       onChange={handleItemsChange}
                                       name="toiletPaper"
-                                      className=""
                                     />
                                   }
-                                  label="Toilet_Paper"
+                                  label="Toilet Paper"
                                 />
 
                                 <FormControlLabel
@@ -406,31 +431,30 @@ const Room_detail = () => {
                                       checked={bathrobe}
                                       onChange={handleItemsChange}
                                       name="bathrobe"
-                                      className=""
                                     />
                                   }
                                   label="Bathrobe"
                                 />
 
                                 <FormControlLabel
+                                  className="HairDryer"
                                   control={
                                     <Checkbox
                                       checked={hairDryer}
                                       onChange={handleItemsChange}
                                       name="hairDryer"
-                                      className=""
                                     />
                                   }
                                   label="Hair Dryer"
                                 />
 
                                 <FormControlLabel
+                                  className="spaBath"
                                   control={
                                     <Checkbox
                                       checked={spaBath}
                                       onChange={handleItemsChange}
                                       name="spaBath"
-                                      className=""
                                     />
                                   }
                                   label="Spa Bath"
@@ -449,8 +473,236 @@ const Room_detail = () => {
               </div>
             </div>
           </div>
-          {/* Restaurants */}
+          {/* General Amenities */}
+          <div className="section-container">
+            <div className="w-full bg-[#003030] text-white py-2 px-4 border border-[#DDDDDD] rounded-[5px]">
+              General Amenities
+            </div>
+            <div class="w-full">
+              <div class="flex-row shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4 flex-row">
+                  <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    {/* General Amenities */}
+                    <div className="General Amenities flex flex-row gap-12 ">
+                      <div className="Features !w-full flex flex-col place-items-center items-start">
+                        <FormControl
+                          component="fieldset"
+                          sx={{ m: 3 }}
+                          variant="standard"
+                        >
+                          <FormLabel
+                            component="legend"
+                            className="!text-black w-full mb-2 !font-[OpenSans]"
+                          >
+                            General Amenities
+                          </FormLabel>
+                          <FormGroup className="GA w-full">
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={airConditioning}
+                                  onChange={handleItemsChange}
+                                  name="airConditioning"
+                                  className=""
+                                />
+                              }
+                              label="Air Conditioning"
+                            />
 
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={heating}
+                                  onChange={handleItemsChange}
+                                  name="aheating"
+                                  className=""
+                                />
+                              }
+                              label="Heating"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={wardrobe}
+                                  onChange={handleItemsChange}
+                                  name="wardrobe"
+                                  className=""
+                                />
+                              }
+                              label="Wardrobe"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={towels}
+                                  onChange={handleItemsChange}
+                                  name="towels"
+                                  className=""
+                                />
+                              }
+                              label="Towels"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={linen}
+                                  onChange={handleItemsChange}
+                                  name="linen"
+                                  className=""
+                                />
+                              }
+                              label="Linen"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={flatScreenTV}
+                                  onChange={handleItemsChange}
+                                  name="flatScreenTV"
+                                  className=""
+                                />
+                              }
+                              label="Flat Screen TV"
+                            />
+                          </FormGroup>
+                        </FormControl>
+                      </div>
+                      {/* outdoor and views */}
+                      <div className="Views flex flex-col place-items-center items-start ">
+                        <FormControl
+                          component="fieldset"
+                          sx={{ m: 3 }}
+                          variant="standard"
+                        >
+                          <FormLabel
+                            component="legend"
+                            className="!text-black mb-2 !font-[OpenSans] OV"
+                          >
+                            Outdoor And Views
+                          </FormLabel>
+                          <FormGroup>
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={balcony}
+                                  onChange={handleItemsChange}
+                                  name="balcony"
+                                  className=""
+                                />
+                              }
+                              label="Balcony"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={terrace}
+                                  onChange={handleItemsChange}
+                                  name="terrace"
+                                  className=""
+                                />
+                              }
+                              label="Terrace"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={views}
+                                  onChange={handleItemsChange}
+                                  name="views"
+                                  className=""
+                                />
+                              }
+                              label="Views"
+                            />
+                          </FormGroup>
+                        </FormControl>
+                      </div>
+                      {/* Food And Drink */}
+                      <div className="flex flex-col place-items-center items-start">
+                        <FormControl
+                          component="fieldset"
+                          sx={{ m: 3 }}
+                          variant="standard"
+                        >
+                          <FormLabel
+                            component="legend"
+                            className="!text-black mb-2 !font-[OpenSans]"
+                          >
+                            Food And Drink
+                          </FormLabel>
+                          <FormGroup className="FD">
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={coffeeMaker}
+                                  onChange={handleItemsChange}
+                                  name="coffeeMaker"
+                                  className=""
+                                />
+                              }
+                              label="Tea/Coffee Maker"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={refrigerator}
+                                  onChange={handleItemsChange}
+                                  name="refrigerator"
+                                  className=""
+                                />
+                              }
+                              label="Refrigerator"
+                            />
+
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={electricKettle}
+                                  onChange={handleItemsChange}
+                                  name="electricKettle"
+                                  className=""
+                                />
+                              }
+                              label="Electric Kettle"
+                            />
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={dinningTable}
+                                  onChange={handleItemsChange}
+                                  name="dinningTable"
+                                  className=""
+                                />
+                              }
+                              label="Dinning Table"
+                            />
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  checked={dinningArea}
+                                  onChange={handleItemsChange}
+                                  name="dinningArea"
+                                  className=""
+                                />
+                              }
+                              label="Dinning Area"
+                            />
+                          </FormGroup>
+                        </FormControl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           {/*Upload Room Images */}
           <div className="section-container w-full">
             <div className="w-full bg-[#003030] text-white py-2 px-4 border border-[#DDDDDD] rounded-[5px]">
@@ -476,10 +728,10 @@ const Room_detail = () => {
               </IconButton>
             </div>
           </div>
-          <div className="pb-[100px]">
+          <div className="pb-[100px] items-center">
             <Button
               variant="contained"
-              className="!bg-[#003030] !text-white !items-center"
+              className="!bg-[#003030] !text-white justify-items-center"
             >
               Save
             </Button>
