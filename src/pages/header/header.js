@@ -156,7 +156,10 @@ const DesktopHeader = () => {
               >
                 HOTEL
               </p>
-              <p className="font-[OpenSans] font-regular text-[16px] text-white cursor-pointer">
+              <p
+                className="font-[OpenSans] font-regular text-[16px] text-white cursor-pointer"
+                onClick={() => navigate("/login")}
+              >
                 TOURIST
               </p>
             </div>

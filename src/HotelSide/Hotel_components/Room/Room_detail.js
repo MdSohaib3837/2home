@@ -175,7 +175,7 @@ const Room_detail = () => {
                   </label>
                   <select
                     class="block appearance-none w-1/2 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-state"
+                    id="grid-state room_type"
                   >
                     <option value="default" defaultChecked>
                       Double
@@ -713,6 +713,7 @@ const Room_detail = () => {
                 className="!bg-[#003030]"
                 variant="contained"
                 component="label"
+                required
               >
                 Upload
                 <input hidden accept="image/*" multiple type="file" />

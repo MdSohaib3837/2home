@@ -1,9 +1,44 @@
 import React, { useState } from "react";
+import { DataGrid } from "@material-ui/data-grid";
 import Header from "../../../pages/header/header";
 import Navbar from "../navbar/Navbar";
 
 import DatePicker from "react-datepicker";
 import { Checkbox, FormControlLabel, Typography } from "@mui/material";
+
+const columns = [
+  { field: "id", headerName: "ID", width: 120 },
+  { field: "firstName", headerName: "First name", width: 190 },
+  { field: "lastName", headerName: "Last name", width: 190 },
+  { field: "status", headerName: "Status", width: 150 },
+  {
+    field: "date",
+    headerName: "Date",
+    type: "date",
+    width: 150,
+  },
+  {
+    field: "fullName",
+    headerName: "Full name",
+    description: "This column has a value getter and is not sortable.",
+    sortable: false,
+    width: 200,
+    valueGetter: (params) =>
+      `${params.row.firstName || ""} ${params.row.lastName || ""}`,
+  },
+];
+
+const rows = [
+  { id: 1, lastName: "Snow", firstName: "Jon", date: "2 / 1 / 2022" },
+  { id: 2, lastName: "Lannister", firstName: "Cersei", date: "2 / 1 / 2022" },
+  { id: 3, lastName: "Lannister", firstName: "Jaime", date: "5 / 1 / 2022" },
+  { id: 4, lastName: "Stark", firstName: "Arya", date: "5 / 1 / 2022" },
+  { id: 5, lastName: "Targaryen", firstName: "Daenerys", date: "6 / 1 / 2022" },
+  { id: 6, lastName: "Melisandre", firstName: null, date: "9 / 1 / 2022" },
+  { id: 7, lastName: "Clifford", firstName: "Ferrara", date: "10 / 1 / 2022" },
+  { id: 8, lastName: "Frances", firstName: "Rossini", date: "12 / 1 / 2022" },
+  { id: 9, lastName: "Roxie", firstName: "Harvey", date: "12 / 1 / 2022" },
+];
 
 const Bookings = () => {
   const [confirmed, setConfirmed] = React.useState();
@@ -20,7 +55,7 @@ const Bookings = () => {
         <div class="col-span-2">
           <Navbar />
         </div>
-        <div class="col-span-10">
+        <div class="col-span-10 ml-4 pr-4">
           <div className="">
             <Header />
           </div>
@@ -126,19 +161,22 @@ const Bookings = () => {
               </div>
             </div>
           </div>
-          <div className="section-container pt-4">
+          <div className="section-container pt-4 ml-4 pr-4">
             <div className="w-full font-[OpenSans] bg-[#003030] text-white py-2 px-4 border border-[#DDDDDD] rounded-[5px]">
               Booking List
             </div>
             <div class="w-full font-[OpenSans]">
               <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div class="mb-4">
-                  <label
-                    class=" font-[OpenSans] block text-[#212529] text-sm mb-2"
-                    for="username"
-                  >
-                    loading
-                  </label>
+                  <div style={{ height: 400, width: "100%" }}>
+                    <DataGrid
+                      rows={rows}
+                      columns={columns}
+                      pageSize={5}
+                      rowsPerPageOptions={[5]}
+                      // checkboxSelection
+                    />
+                  </div>
                 </div>
               </form>
             </div>

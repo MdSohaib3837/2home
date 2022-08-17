@@ -1,7 +1,69 @@
-import React from "react";
 import Header from "../../../pages/header/header";
 import Navbar from "../navbar/Navbar";
 import "./payment.scss";
+
+import * as React from "react";
+import { DataGrid } from "@material-ui/data-grid";
+
+const columns = [
+  { field: "id", headerName: "ID", width: 120 },
+  { field: "payementType", headerName: "Type", width: 140 },
+  { field: "amount", headerName: "Amount", type: "number", width: 150 },
+  {
+    field: "payementMethod",
+    headerName: "Payed Through",
+    width: 200,
+  },
+  {
+    field: "payedBy",
+    headerName: "Payed By",
+    description: "This column has a value getter and is not sortable.",
+    sortable: false,
+    width: 160,
+    // valueGetter: (params) =>
+    //   `${params.row.firstName || ""} ${params.row.lastName || ""}`,
+  },
+];
+
+const rows = [
+  {
+    id: 1,
+    payementType: "Cash",
+    amount: 2000,
+    payementMethod: "Cash",
+    payedBy: "Nazeer Ahmed",
+  },
+  {
+    id: 2,
+    payementType: "Cash",
+    amount: 2500,
+    payementMethod: "Cash",
+    payedBy: "Faizan",
+  },
+  {
+    id: 3,
+    payementType: "Online",
+    amount: 4000,
+    payementMethod: "Easypaisa",
+    payedBy: "Malik Mobeen",
+  },
+  {
+    id: 4,
+    payementType: "Online",
+    amount: 3000,
+    payementMethod: "JazzCash",
+    payedBy: "Arslan",
+  },
+  { id: 5, payementType: "Due", amount: 1000, payementMethod: null },
+  {
+    id: 6,
+    payementType: "Online",
+    amount: 5000,
+    payementMethod: "Mastercard",
+    payedBy: "Ilyas Yousafzai",
+  },
+];
+
 const payment = () => {
   return (
     <div>
@@ -10,7 +72,7 @@ const payment = () => {
           <div class="col-span-2">
             <Navbar />
           </div>
-          <div class="col-span-10">
+          <div class="col-span-10 ml-4 pr-4">
             <div className="">
               <Header />
             </div>
@@ -55,11 +117,21 @@ const payment = () => {
                 </select>
               </div>
             </div>
-            <div className="section-container w-full">
+            <div className="section-container w-full ml-4 pr-4">
               <div className="w-full bg-[#003030] text-white py-2 px-4 border border-[#DDDDDD] rounded-[5px]">
                 Payments
               </div>
-              <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"></div>
+              <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div style={{ height: 400, width: "100%" }}>
+                  <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    pageSize={5}
+                    rowsPerPageOptions={[5]}
+                    checkboxSelection
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

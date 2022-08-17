@@ -80,14 +80,7 @@ export default function Core() {
                 </ComponentWrapper>
               }
             />
-            <Route
-              path="/login"
-              element={
-                <ComponentWrapper>
-                  <Login />
-                </ComponentWrapper>
-              }
-            />
+            <Route path="/login" element={<Login />} />
             <Route
               path="/privacy-page"
               element={

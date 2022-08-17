@@ -62,7 +62,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #003030;
+  color: blue;
 }
 
 /*---------------------------------------------*/
@@ -78,7 +78,7 @@ p {
 	margin: 0px;
 }
 
-ul, li {
+.fa-Social, li {
 	list-style-type: none;
 }
 
@@ -127,6 +127,7 @@ button {
 
 button:hover {
 	cursor: pointer !important;
+  background: -webkit-linear-gradient(45deg, #003030 ,#3d807b);
 }
 
 iframe {
@@ -135,12 +136,12 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
-.txt1 {
+.SignUptxt {
   font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.5;
   color: #666666;
-  margin-left: 210px !important;
+  margin-left: 185px !important;
 }
 
 .txt2 {
@@ -213,22 +214,22 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
-.wrap-input100 {
+.USerNameField {
   width: 100% !important;
   position: relative !important;
   border-bottom: 2px solid #d9d9d9 !important;
 }
 
-.label-input100 {
-  font-family: Poppins-Regular !important;
+.UF-Label {
+  
   font-size: 14px !important;
   color: #333333 !important;
   line-height: 1.5 !important;
   padding-left: 7px !important;
 }
 
-.input100 {
-  font-family: Poppins-Medium !important;
+.Uinput {
+ 
   font-size: 16px !important;
   color: #333333 !important;
   line-height: 1.2 !important; 
@@ -242,7 +243,7 @@ iframe {
 
 
 /*---------------------------------------------*/
-.focus-input100  {
+.UF_icon  {
   position: absolute !important; 
   display: block !important;
   top: 21px !important;
@@ -250,7 +251,7 @@ iframe {
   pointer-events: none !important;
 }
 
-.focus-input100::after {
+.UF_icon::after {
   content: attr(data-symbol) !important;
   font-family: Material-Design-Iconic-Font !important;
   color: #adadad !important;
@@ -271,7 +272,7 @@ iframe {
   padding-top: 3px !important;
 }
 
-.focus-input100::before {
+.UF_icon::before {
   content: "" !important;
   display: block !important;
   position: absolute !important;
@@ -287,26 +288,26 @@ iframe {
 }
 
 
-.input100:focus + .focus-input100::before {
+.input100:focus + .UF_icon::before {
   width: 100% !important;
 }
 
-.has-val.input100 + .focus-input100::before {
+.has-val.input100 + .UF_icon::before {
   width: 100% !important;
 }
 
-.input100:focus + .focus-input100::after {
+.input100:focus + .UF_icon::after {
   color: #a64bf4 !important;
 }
 
-.has-val.input100 + .focus-input100::after {
+.has-val.input100 + .UF_icon::after {
   color: #a64bf4 !important;
 }
 
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+.container-button {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -moz-box !important;
@@ -316,7 +317,7 @@ iframe {
   justify-content: center !important;
 }
 
-.wrap-login100-form-btn {
+.WrapButton {
   width: 100% !important;
   display: block !important;
   position: relative !important;
@@ -326,14 +327,14 @@ iframe {
   margin: 0 auto !important;
 }
 
-.login100-form-bgbtn {
+.BgButton {
   position: absolute !important;
   z-index: -1 !important;
   width: 300% !important;
   height: 100% !important;
    top: 0 !important;
    left: -100% !important;
-   background: -webkit-linear-gradient(45deg,#faf7f7, #003030);
+   background: -webkit-linear-gradient(45deg,#3d807b, #003030);
 
    -webkit-transition: all 0.4s !important;
    -o-transition: all 0.4s !important;
@@ -341,7 +342,7 @@ iframe {
    transition: all 0.4s !important;
 }
 
-.login100-form-btn {
+.loginButton {
   font-family: Poppins-Medium !important;
   font-size: 16px !important;
   color: #fff !important;
@@ -360,7 +361,7 @@ iframe {
   height: 50px !important;
 }
 
- .wrap-login100-form-btn:hover {
+ .WrapButton:hover {
    left: 0 !important;
  }
 
@@ -435,7 +436,7 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Social item ]*/
-.login100-social-item {
+.social-item {
   font-size: 25px !important;
   color: #fff !important;
 
@@ -452,13 +453,12 @@ iframe {
   margin: 5px !important;
 }
 
-.login100-social-item:hover {
+.social-item:hover {
   color: #fff !important;
   background-color: #333333 !important;
 }
 
-.link_forget{
-  font-family: Poppins-Regular;
+.txt_Forget{
     font-size: 14px;
     line-height: 1.7;
     color: #666666;

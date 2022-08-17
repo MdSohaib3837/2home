@@ -9,6 +9,7 @@ import Facebook from "../../assets/icons/social/facebook.svg";
 import Instagram from "../../assets/icons/social/instagram.svg";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import { useNavigate } from "react-router-dom";
 
 import "./footer.scss";
 
@@ -32,6 +33,7 @@ function Copyright(props) {
 
 export default function Footer(props) {
   const { hasFields } = props;
+  const navigate = useNavigate();
 
   return (
     <Grid container>
@@ -59,10 +61,7 @@ export default function Footer(props) {
                 >
                   <div className="flex flex-col pt-[20px] ml-[30px] box-border h-full justify-between">
                     <div>
-                      <p
-                        className="font-[OpenSans] font-bold text-[16px] text-[#C49676]"
-                        onClick={"/contact"}
-                      >
+                      <p className="font-[OpenSans] font-bold text-[16px] text-[#C49676]">
                         Contact
                       </p>
                       <p className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px]">
@@ -113,10 +112,16 @@ export default function Footer(props) {
                     <p className="font-[OpenSans] font-bold text-[16px] text-[#C49676]">
                       Headings
                     </p>
-                    <p className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px]">
+                    <p
+                      className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px] cursor-pointer"
+                      onClick={() => navigate("/Dashboard")}
+                    >
                       HOTEL
                     </p>
-                    <p className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px]">
+                    <p
+                      className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px] cursor-pointer"
+                      onClick={() => navigate("/home")}
+                    >
                       TOURIST
                     </p>
                     <p className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px]">
