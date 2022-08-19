@@ -127,7 +127,7 @@ button {
 
 button:hover {
 	cursor: pointer !important;
-  background: -webkit-linear-gradient(45deg, #003030 ,#3d807b);
+  background: -webkit-linear-gradient(45deg, #003030 ,#62c0b9) !important ;
 }
 
 iframe {
@@ -334,7 +334,7 @@ iframe {
   height: 100% !important;
    top: 0 !important;
    left: -100% !important;
-   background: -webkit-linear-gradient(45deg,#3d807b, #003030);
+   background: -webkit-linear-gradient(45deg,#62c0b9, #003030) !important;
 
    -webkit-transition: all 0.4s !important;
    -o-transition: all 0.4s !important;
