@@ -42,7 +42,7 @@ export default function BiddingForm() {
   console.log("lunch", lunch);
   console.log("dinner", dinner);
   const [values, setValues] = React.useState({
-    amount: 0,
+    amount: null,
   });
 
   const handleValueChange = (prop) => (event) => {
@@ -50,20 +50,10 @@ export default function BiddingForm() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "60vh" }}>
-        <CssBaseline />
-
-        <Grid
-          className="m-auto w-2/4"
-          Griditem
-          xs={12}
-          sm={8}
-          md={5}
-          component={Paper}
-          elevation={6}
-          square
-        >
+    <>
+      <div className="MAin div mt-8">
+        <h1 className="text-3xl">Lets make a Bid! </h1>
+        <div className="w-full font-[OpenSans] py-2 px-4 border border-[#DDDDDD] rounded-[5px]">
           <Box
             sx={{
               my: 5,
@@ -71,6 +61,7 @@ export default function BiddingForm() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Typography className="Heading1 font-[OpenSans]" component="h1">
@@ -147,7 +138,7 @@ export default function BiddingForm() {
               </span>
             </Grid>
 
-            <Grid>
+            <Grid className="mt-8 !items-center">
               <Typography className="Heading1 font-[OpenSans]" component="h1">
                 Offer Your Fare
               </Typography>
@@ -163,7 +154,7 @@ export default function BiddingForm() {
                     onChange={handleValueChange("amount")}
                     label="Amount"
                     startAdornment={
-                      <InputAdornment position="start">$</InputAdornment>
+                      <InputAdornment position="start">PKR</InputAdornment>
                     }
                   />
                 </FormControl>
@@ -178,8 +169,8 @@ export default function BiddingForm() {
               </Grid>
             </Grid>
           </Box>
-        </Grid>
-      </Grid>
-    </ThemeProvider>
+        </div>
+      </div>
+    </>
   );
 }
