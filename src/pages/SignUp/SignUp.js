@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -13,28 +13,56 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useForm } from "react-hook-form";
+///*Firebase Files//////////////
+import { firestore, signUp } from "../../firebase";
+import { addDoc, collection } from "@firebase/firestore";
 
 const theme = createTheme();
 
-export default function SignUp() {
+const SignUp = () => {
   const navigate = useNavigate();
+  const firebaseRef = collection(firestore, "users");
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const confirmpasswordRef = useRef();
   const handleSubmit = (event) => {
+    console.log("ddd", firstNameRef.current.value);
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
-  const {
-    register,
-
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => {
+    const data = {
+      firstname: firstNameRef.current.value,
+      lastname: lastNameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+      confirmpassword: confirmpasswordRef.current.value,
+    };
     console.log(data);
+    try {
+      signUp(data);
+      addDoc(firebaseRef, data);
+      navigate("/home");
+    } catch (error) {}
   };
+
+  // const [user, setUser] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   password: "",
+  //   Confirm_password: "",
+  // });
+
+  // let name, value;
+
+  // const handleInputs = (e) => {
+  //   console.log(e);
+  //   name = e.target.name;
+  //   value = e.target.value;
+
+  //   setUser({ ...user, [name]: value });
+  // };
+  // console.log("user", user);
 
   return (
     <ThemeProvider theme={theme}>
@@ -54,24 +82,22 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 3 }}
-          >
-            <form>
+          <Box component="form" noValidate sx={{ mt: 3 }}>
+            <div>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     autoComplete="given-name"
                     name="firstName"
-                    required
                     fullWidth
                     id="firstName"
                     label="First Name"
+                    // value={user?.firstName}
+                    // onChange={handleInputs}
                     autoFocus
+                    inputRef={firstNameRef}
                   />
+                  <label id="name" className="text-red-800"></label>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -80,7 +106,10 @@ export default function SignUp() {
                     id="lastName"
                     label="Last Name"
                     name="lastName"
+                    // value={user?.lastName}
+                    // onChange={handleInputs}
                     autoComplete="family-name"
+                    inputRef={lastNameRef}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -91,17 +120,10 @@ export default function SignUp() {
                     label="Email Address"
                     name="email"
                     autoComplete="email"
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                        message: "Email is not valid",
-                      },
-                    })}
+                    // value={user?.email}
+                    // onChange={handleInputs}
+                    inputRef={emailRef}
                   />
-                  {errors.email && (
-                    <p className="errorMsg">{errors.email.message}</p>
-                  )}
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
@@ -112,26 +134,20 @@ export default function SignUp() {
                     type="password"
                     id="password"
                     autoComplete="new-password"
-                    {...register("password", {
-                      required: "Password is required",
-                      minLength: {
-                        value: 6,
-                        message: "Password must be atleast 6 characters",
-                      },
-                    })}
+                    inputRef={passwordRef}
                   />
-                  {errors.password && (
-                    <p className="errorMsg">{errors.password.message}</p>
-                  )}
                 </Grid>{" "}
                 <Grid item xs={12}>
                   <TextField
                     required
                     fullWidth
-                    name="Confirm password"
+                    name="Confirm_password"
                     label="Confirm Password"
                     type="password"
                     id="password"
+                    // value={user?.Confirm_password}
+                    // onChange={handleInputs}
+                    inputRef={confirmpasswordRef}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -149,7 +165,7 @@ export default function SignUp() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "#003030 !important" }}
-                onClick={() => navigate("/home")}
+                onClick={handleSubmit}
               >
                 Sign Up
               </Button>
@@ -160,10 +176,12 @@ export default function SignUp() {
                   </Link>
                 </Grid>
               </Grid>
-            </form>
+            </div>
           </Box>
         </Box>
       </Container>
     </ThemeProvider>
   );
-}
+};
+
+export default SignUp;

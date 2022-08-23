@@ -10,7 +10,7 @@ import BiddingForm from "../../components/FormHeader/BiddingForm";
 const ResultPage = () => {
   return (
     <>
-      <Container className="50vh 80vw">
+      <Container className="50vh">
         <BiddingForm />
       </Container>
 

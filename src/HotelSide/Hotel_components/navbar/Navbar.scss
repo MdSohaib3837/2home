@@ -4,6 +4,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  margin: auto;
 }
 
 .menu-bars{
@@ -22,8 +23,10 @@
   position: fixed;
   top: 0;
   transition: 850ms;
+  
 
 }
+
 
 .logo_sidebar{
   margin-left: 54px !important;
@@ -43,9 +46,10 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 8px 0px 8px 16px;
+  padding: 8px 8px 8px 16px;
   list-style: none;
   height: 60px;
+  
 }
 
 .nav-text a {
@@ -64,6 +68,7 @@
   background-color: #1a83ff;
 }
 .nav-menu-items {
+
   width:  100%;
 }
 .navbar-toggle {
@@ -75,6 +80,6 @@
   align-items: center;
 }
 
-span {
+.navTitle {
   margin-left: 12px;
 }

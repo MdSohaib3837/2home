@@ -70,7 +70,7 @@ export default function Main() {
                 <div className="flex items-center">
                   <p
                     className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] cursor-pointer"
-                    onClick={() => navigate("/login")}
+                    onClick={() => navigate("/Dashboard")}
                   >
                     HOTEL
                   </p>
@@ -107,11 +107,9 @@ export default function Main() {
                   alt="logo"
                   className="h-[256px] object-contain"
                 />
-                <img
-                  src={BrandText}
-                  alt="brand text"
-                  className="w-[540px] object-contain mt-[67px]"
-                />
+                <h1 className="slogan text-bold font-[OpenSans] text-white mt-8">
+                  Hey wanderer! Be Our Guest...
+                </h1>
               </Grid>
             </BreakpointController>
             <BreakpointController direction="up" breakpoint="sm">
@@ -136,11 +134,11 @@ export default function Main() {
                   alt="logo"
                   className="h-[256px] object-contain mt-[50px]"
                 />
-                <img
+                {/* <img
                   src={BrandText}
                   alt="brand text"
                   className="w-[540px] object-contain mt-[50px]"
-                />
+                /> */}
               </Grid>
               {/* side menu overlay */}
               <div

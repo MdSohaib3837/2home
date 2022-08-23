@@ -1,97 +1,7 @@
 
 
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../../assets/fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../../assets/fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../../assets/fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../../assets/fonts/poppins/Poppins-SemiBold.ttf'); 
-}
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
-}
-
-/*---------------------------------------------*/
-a {
-	font-family: Poppins-Regular;
-	font-size: 16px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 10px;
-  margin-top: 100px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-  color: blue;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
-
 .fa-Social, li {
 	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
-input {
-	outline: none;
-	border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
 }
 
 textarea:focus, input:focus {
@@ -119,13 +29,13 @@ textarea::-moz-placeholder { color: #adadad;}
 textarea:-ms-input-placeholder { color: #adadad;}
 
 /*---------------------------------------------*/
-button {
+.loginButton {
 	outline: none !important;
 	border: none !important;
 	background: transparent !important;
 }
 
-button:hover {
+.loginButton:hover {
 	cursor: pointer !important;
   background: -webkit-linear-gradient(45deg, #003030 ,#62c0b9) !important ;
 }

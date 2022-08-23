@@ -138,7 +138,7 @@ export default function BiddingForm() {
               </span>
             </Grid>
 
-            <Grid className="mt-8 !items-center">
+            <Grid className="mt-8">
               <Typography className="Heading1 font-[OpenSans]" component="h1">
                 Offer Your Fare
               </Typography>
@@ -150,7 +150,7 @@ export default function BiddingForm() {
                   <FilledInput
                     id="filled-adornment-amount"
                     type="number"
-                    value={values.amount > 0 ? values.amount : 0}
+                    // value={values.amount > 0 ? values.amount : null}
                     onChange={handleValueChange("amount")}
                     label="Amount"
                     startAdornment={

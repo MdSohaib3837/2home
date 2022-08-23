@@ -18,17 +18,11 @@ export default function SecondSection() {
         <div class="grid lg:col-start-1 lg:col-span-7 md:col-start-1 md:col-span-7 sm:col-start-1 sm:col-span-7 xs:col-start-1 xs:col-span-7 gap-4">
           <Card className="radius px-4">
             <CardContent>
-              <div className="flex justify-between items-center">
-                <Badge name="Nouveau" />
-                <LikeSaveBtns />
-              </div>
-            </CardContent>
-            <CardContent>
               <p className="font-[Poppins] font-bold lg:text-4xl md:text-[20px]  text-left">
-			  Villa for Rent
+                Paradise Hotel for Rent
               </p>
               <p className="font-[Poppins] textcolor text-right md:text-[20px] font-bold lg:text-4xl lg:-mt-10 md:-mt-7 ">
-                940.000$
+                1500 PKR
               </p>
             </CardContent>
             <CardContent className="lg:!p-4 md:!p-0">
@@ -36,7 +30,7 @@ export default function SecondSection() {
                 <span className="lg:pt-1.5 md:py-4 lg:pb-4 lg:px-3 md:px-3 flex rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer">
                   <img src={location} className="h-6" />
                   <span className="hidden sm:block ml-2.5">
-                    1150 Adam-St-Mangora SWAT
+                    Mall Road Kalam SWAT
                   </span>
                 </span>
               </div>
@@ -49,7 +43,7 @@ export default function SecondSection() {
                   <span>
                     6{" "}
                     <span className="lg:contents md:hidden sm:hidden xs:hidden sm:inline-block">
-					bedrooms
+                      bedrooms
                     </span>
                   </span>
                 </div>
@@ -58,19 +52,11 @@ export default function SecondSection() {
                   <span>
                     4{" "}
                     <span className="lg:contents md:hidden sm:hidden xs:hidden sm:inline-block">
-					bathrooms
+                      bathrooms
                     </span>
                   </span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <img src={terrain2} className="h-6" />
-                  <span>
-                    600m²{" "}
-                    <span className="lg:contents md:hidden sm:hidden xs:hidden sm:inline-block">
-					habitable
-                    </span>
-                  </span>
-                </div>
+
                 <div className="flex items-center space-x-3">
                   <img src={terrain} className="h-6" />
                   <span>

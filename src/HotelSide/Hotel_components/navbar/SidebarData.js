@@ -36,12 +36,7 @@ export const SiderbarData = [
     icon: <AiIcons.AiFillDollarCircle />,
     cName: "nav-text",
   },
-  {
-    title: "Occupancy",
-    path: "/Occupancy",
-    icon: <AiIcons.AiFillHourglass />,
-    cName: "nav-text",
-  },
+
   {
     title: "Room",
     path: "/Room",

@@ -73,11 +73,7 @@ const MobileHeader = () => {
               className="h-[100px] object-contain"
             />
           </Grid>
-          <Grid container>
-            <p className="font-[Poppins] font-semibold text-[26px] text-[#222] mt-[20px]">
-              The real estate<br></br>experience
-            </p>
-          </Grid>
+
           <Grid container>
             <div className="flex mt-[30px]">
               <img
@@ -160,7 +156,7 @@ const DesktopHeader = () => {
                 TOURIST
               </p>
             </div>
-            <div className="flex relative">
+            <div className="flex relative ">
               <p className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] cursor-pointer uppercase">
                 Bookings
               </p>

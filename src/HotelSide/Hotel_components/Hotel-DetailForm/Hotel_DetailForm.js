@@ -18,8 +18,15 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import Header from "../../../pages/header/header";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+///*Firebase Files//////////////
+import { firestore, signUp } from "../../../firebase";
+import { addDoc, collection } from "@firebase/firestore";
 
 const HotelForm = () => {
+  const navigate = useNavigate();
   const [time, setTime] = React.useState(new Date("2020-01-01 12:00"));
   const [wifi, setWifi] = React.useState();
   const [parking, setParking] = React.useState();
@@ -33,14 +40,71 @@ const HotelForm = () => {
   const [policy1, setPolicy1] = React.useState();
   const [policy2, setPolicy2] = React.useState();
   const [policy3, setPolicy3] = React.useState();
-  const [formData, setFormData] = useState({
-    accomodationType: "Hotel",
-  });
-
-  const HandleChange = (e) => {
+  const [accomodationType, setAccomodationType] = useState();
+  const [destination, setDestination] = useState();
+  const firebaseRef = collection(firestore, "Hotel_Details");
+  const hotelNameRef = useRef();
+  const descriptionRef = useRef();
+  const contactRef = useRef();
+  const keyFeature1Ref = useRef();
+  const keyFeature2Ref = useRef();
+  const keyFeature3Ref = useRef();
+  const accommodationRef = useRef();
+  const cityRef = useRef();
+  const areaRef = useRef();
+  const whatsappRef = useRef();
+  const addressRef = useRef();
+  const imageRef = useRef();
+  const HandleAccomodationChange = (e) => {
     e.preventDefault();
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setAccomodationType({
+      ...accomodationType,
+      [e.target.name]: e.target.value,
+    });
   };
+
+  const HandleCITYChange = (e) => {
+    e.preventDefault();
+    setDestination({
+      ...destination,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    console.log("ddd", hotelNameRef.current.value);
+    event.preventDefault();
+    const data = {
+      hotelname: hotelNameRef.current.value,
+      description: descriptionRef.current.value,
+      referenceContact: contactRef.current.value,
+      keyfeature1: keyFeature1Ref.current.value,
+      keyfeature2: keyFeature2Ref.current.value,
+      keyfeature3: keyFeature3Ref.current.value,
+      accomodationType: accommodationRef.current.value,
+    };
+    console.log(data);
+    try {
+      signUp(data);
+      addDoc(firebaseRef, data);
+      navigate("/home");
+    } catch (error) {}
+  };
+
+  console.log("Wifi", wifi);
+  console.log("Parking", parking);
+  console.log("Breakfast", breakfast);
+  console.log("Lunch", lunch);
+  console.log("Dinner", dinner);
+  console.log("Smoking", smoking);
+  console.log("Children", children);
+  console.log("Online_payment", onlinepayment);
+  console.log("OnArrival", onArrival);
+  console.log("Policy1", policy1);
+  console.log("Policy2", policy2);
+  console.log("Policy3", policy3);
+  console.log("FormData.AccomodationType", accomodationType);
+  console.log("Select City", destination);
   return (
     <div class="grid grid-cols-12">
       <div class="col-span-2">
@@ -57,7 +121,10 @@ const HotelForm = () => {
               Hotel Details
             </div>
             <div class="w-full font-[OpenSans]">
-              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <form
+                method="POST"
+                class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+              >
                 <div class="mb-4">
                   <label
                     class=" font-[OpenSans] block text-gray-700 text-sm font-bold mb-2"
@@ -68,9 +135,11 @@ const HotelForm = () => {
                   <input
                     class="shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="hotelname"
+                    name="hotelname"
                     type="text"
                     placeholder="Hotel Name"
                     required
+                    inputref={hotelNameRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -80,8 +149,10 @@ const HotelForm = () => {
                   <input
                     class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                     id="description"
+                    name="description"
                     type="text"
                     placeholder="Description"
+                    inputref={descriptionRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -90,9 +161,11 @@ const HotelForm = () => {
                   </label>
                   <input
                     class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="reference name"
+                    id="reference_name"
+                    name="referenceContact"
                     type="text"
                     placeholder="Reference Name (optional)"
+                    inputref={contactRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -101,9 +174,24 @@ const HotelForm = () => {
                   </label>
                   <input
                     class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="key feature 1"
+                    id="key_feature_1"
+                    name="keyfeature1"
                     type="text"
                     placeholder="key feature"
+                    inputref={keyFeature1Ref}
+                  />
+                </div>
+                <div class="mb-6">
+                  <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Key Feature 2
+                  </label>
+                  <input
+                    class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    id="key feature 1"
+                    name="keyfeature2"
+                    type="text"
+                    placeholder="key feature"
+                    inputref={keyFeature2Ref}
                   />
                 </div>
                 <div class="mb-6">
@@ -113,19 +201,10 @@ const HotelForm = () => {
                   <input
                     class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                     id="key feature 1"
+                    name="keyfeature3"
                     type="text"
                     placeholder="key feature"
-                  />
-                </div>
-                <div class="mb-6">
-                  <label class="block text-gray-700 text-sm font-bold mb-2">
-                    Key Feature 3
-                  </label>
-                  <input
-                    class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="key feature 1"
-                    type="text"
-                    placeholder="key feature"
+                    inputref={keyFeature3Ref}
                   />
                 </div>
                 <div class="mb-6">
@@ -133,11 +212,14 @@ const HotelForm = () => {
                     Accommodation Type
                   </label>
                   <select
-                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    onClick={HandleAccomodationChange}
+                    className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state"
+                    name="accomodationType"
+                    ref={accommodationRef}
                   >
                     <option value="default" defaultChecked>
-                      Select city
+                      Select
                     </option>
                     <option>Hotel</option>
                     <option>Guest House</option>
@@ -163,8 +245,11 @@ const HotelForm = () => {
                     </label>
                     <div class="relative">
                       <select
+                        onClick={HandleCITYChange}
                         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="grid-state"
+                        name="Selected_City"
+                        ref={cityRef}
                       >
                         <option value="default" defaultChecked>
                           Select city
@@ -196,6 +281,7 @@ const HotelForm = () => {
                     id="Area"
                     type="text"
                     placeholder="Area"
+                    ref={areaRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -204,9 +290,10 @@ const HotelForm = () => {
                   </label>
                   <input
                     class="shadow appearance-none border border-red-500 rounded w-1/2 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="Whatsapp No"
+                    id="Whatsapp_No"
                     type="text"
                     placeholder="Whatsapp No"
+                    ref={whatsappRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -218,6 +305,7 @@ const HotelForm = () => {
                     id="title"
                     type="text"
                     placeholder="Address"
+                    ref={addressRef}
                   />
                 </div>
                 <div class="mb-6">
@@ -552,6 +640,7 @@ const HotelForm = () => {
                 className="!bg-[#003030]"
                 variant="contained"
                 component="label"
+                ref={imageRef}
               >
                 Upload
                 <input hidden accept="image/*" multiple type="file" />
@@ -561,8 +650,9 @@ const HotelForm = () => {
                 aria-label="upload picture"
                 component="label"
                 className="!bg-[#003030] !ml-6"
+                ref={imageRef}
               >
-                <input hidden accept="image/*" type="file" />
+                <input ref={imageRef} hidden accept="image/*" type="file" />
                 <PhotoCamera className="!text-white" />
               </IconButton>
             </div>
@@ -571,6 +661,7 @@ const HotelForm = () => {
             <Button
               variant="contained"
               className="!bg-[#003030] !text-white !items-center"
+              onClick={handleSubmit}
             >
               Submit
             </Button>

@@ -9,7 +9,7 @@ import Facebook from "../../assets/icons/social/facebook.svg";
 import Instagram from "../../assets/icons/social/instagram.svg";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import "./footer.scss";
 
@@ -114,9 +114,11 @@ export default function Footer(props) {
                     </p>
                     <p
                       className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px] cursor-pointer"
-                      onClick={() => navigate("/Dashboard")}
+                      // onClick={() => navigate("/Dashboard")}
                     >
-                      HOTEL
+                      <NavLink exact to="/Dashboard">
+                        HOTEL
+                      </NavLink>
                     </p>
                     <p
                       className="font-[OpenSans] font-regular text-[16px] text-white mt-[15px] cursor-pointer"

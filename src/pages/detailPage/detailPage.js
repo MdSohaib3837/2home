@@ -13,8 +13,6 @@ export default function DetailPage() {
     <>
       <FirstSection />
       <SecondSection />
-      <ThirdSection />
-      <SliderSection />
     </>
   );
 }

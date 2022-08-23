@@ -1,21 +1,18 @@
-import * as React from "react";
+import React, { useState, useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.scss";
-import { TextField } from "@mui/material";
+import { Paper } from "@mui/material";
+import { firestore, signIn } from "../../firebase";
+import { addDoc, collection } from "@firebase/firestore";
 import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
   FaFacebook,
@@ -26,13 +23,20 @@ import {
 
 export default function SignInSide() {
   const navigate = useNavigate();
-  const handleSubmit = (event) => {
+  const userNameRef = useRef();
+  const passNameRef = useRef();
+  const firebaseRef = collection(firestore, "users");
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const data = {
+      username: userNameRef.current.value,
+      password: passNameRef.current.value,
+    };
+    try {
+      await signIn({ data });
+      // addDoc(firebaseRef, data);
+      navigate("/home");
+    } catch (error) {}
   };
 
   return (
@@ -80,6 +84,7 @@ export default function SignInSide() {
                   className="Uinput font-[OpenSans]"
                   type="text"
                   name="username"
+                  ref={userNameRef}
                   placeholder="Type your username"
                 />
                 <span className="UF_icon">
@@ -96,6 +101,7 @@ export default function SignInSide() {
                 className="Uinput font-[OpenSans]"
                 type="password"
                 name="pass"
+                ref={passNameRef}
                 placeholder="Type your password"
               />
               <span class="UF_icon">
@@ -109,10 +115,8 @@ export default function SignInSide() {
               <Grid className="WrapButton">
                 <Grid className="BgButton"></Grid>
                 <Button
-                  className="loginButton"
-                  onClick={() => {
-                    navigate("/");
-                  }}
+                  className="loginButton font-[OpenSans]"
+                  onClick={handleSubmit}
                 >
                   Login
                 </Button>
