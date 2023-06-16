@@ -35,7 +35,6 @@ export default function SignInSide() {
     try {
       await signIn({ data });
       // addDoc(firebaseRef, data);
-      navigate("/home");
     } catch (error) {}
   };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Container } from "@mui/material";
+import { Grid, Container, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 
 import "./banner.scss";
@@ -40,10 +40,12 @@ const Banner = () => {
                   sx={{ width: 60, height: 60 }}
                 />
                 <div className="pl-6">
-                  <h1 className="font-[OpenSans] font-bold">Muhammad Uzair</h1>
-                  <h1 className="font-[OpenSans] text-[#666666]">
+                  <Typography className="font-[OpenSans] font-bold">
+                    Muhammad Ilyas
+                  </Typography>
+                  <Typography className="font-[OpenSans] text-[#666666]">
                     Booking a Room
-                  </h1>
+                  </Typography>
                 </div>
               </div>
               <p className="text-[#222222] font-[OpenSans] pt-4">

@@ -82,10 +82,16 @@ export default function Main() {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <p className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] uppercase cursor-pointer">
+                  <p
+                    onClick={() => navigate("/Bookings")}
+                    className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] uppercase cursor-pointer"
+                  >
                     Bookings
                   </p>
-                  <p className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] cursor-pointer">
+                  <p
+                    onClick={() => navigate("/Payments")}
+                    className="font-[OpenSans] font-regular text-[16px] text-white mr-[70px] cursor-pointer"
+                  >
                     PAYMENTS
                   </p>
                   <p

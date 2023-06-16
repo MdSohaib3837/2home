@@ -7,6 +7,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import "firebase/auth";
+import { Navigate } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBvUoIX46gXrATytUitSPh9JXF8dVUyrIM",
@@ -51,6 +52,7 @@ export const signUp = async (user) => {
       console.log(res);
     });
     alert("You've logged in successfuly");
+    Navigate(-1);
   } catch (err) {
     console.error(err);
     alert("The email or password is incorrect, please try again");
